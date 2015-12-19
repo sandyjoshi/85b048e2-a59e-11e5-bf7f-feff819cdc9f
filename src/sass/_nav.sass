@@ -1,0 +1,26 @@
+@import colors
+
+.navbar
+	background: $nav-background
+	li
+		list-style : none
+		display: inline-block
+		padding: 10px
+		border: 5px solid transparent
+	li:hover
+		background: $nav-selected
+	.active
+		border-bottom: 5px solid $nav-selected-border
+		background: $nav-selected
+		a
+			color:white
+	a
+		color : $nav-color
+		text-decoration: none
+
+.navbar-right
+	float : right
+	margin: 0
+
+.navbar-content
+	overflow: auto
