@@ -1,7 +1,10 @@
 @import colors
+@import overrides
 
 .navbar
+	text-align: center
 	background: $nav-background
+	height: 43px
 	li
 		list-style : none
 		display: inline-block
@@ -25,6 +28,16 @@
 .navbar-right
 	float : right
 	margin: 0
+	padding-left : 0
 
 .navbar-content
 	overflow: auto
+	display: inline-block
+	text-align: left
+
+	@media #{$large}
+		width: $max-width;
+	@media #{$desktop}
+		width: $max-width-per;
+	@media #{$tablet}
+		width: $max-width-per;

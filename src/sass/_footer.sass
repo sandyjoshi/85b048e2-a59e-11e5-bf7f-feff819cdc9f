@@ -9,6 +9,7 @@ footer
 .footer-col
 	display: inline-block
 	vertical-align: top
+	padding-left: 3%
 	.footer-col-item
 		color: $footer-color
 		list-style: none
@@ -16,3 +17,13 @@ footer
 	.footer-col-header
 		color: white
 		list-style: none
+
+.footer-content
+	display: inline-block
+
+	@media #{$large}
+		width: $max-width;
+	@media #{$desktop}
+		width: $max-width-per;
+	@media #{$tablet}
+		width: $max-width-per;

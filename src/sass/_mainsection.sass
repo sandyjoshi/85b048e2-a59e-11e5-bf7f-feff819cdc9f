@@ -1,7 +1,12 @@
 @import colors
+@import overrides
+
 
 .main-section
 	margin-bottom: 70px
+
+.main-section-title
+	margin-top: 20px
 
 .main-section-para-1
 	font-size: 20px
@@ -24,3 +29,17 @@
 		display: inline-block
 		padding: 0 10px
 		background-color: white
+
+.all-section-container
+	text-align: center
+
+.all-section-content
+	display: inline-block
+	text-align: left
+
+	@media #{$large}
+		width: $max-width;
+	@media #{$desktop}
+		width: $max-width-per;
+	@media #{$tablet}
+		width: $max-width-per;

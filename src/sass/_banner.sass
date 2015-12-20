@@ -1,8 +1,10 @@
 @import colors
+@import overrides
 
 .banner
 	padding: 50px 0
 	background : $banner-background
+	text-align: center
 
 .banner-text-section
 	width : 50%
@@ -12,3 +14,14 @@
 	background : $banner-text
 	color : white
 	font-size : 22px
+
+.banner-content
+	display: inline-block
+	text-align: left
+
+	@media #{$large}
+		width: $max-width;
+	@media #{$desktop}
+		width: $max-width-per;
+	@media #{$tablet}
+		width: $max-width-per;
