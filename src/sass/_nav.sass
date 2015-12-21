@@ -4,17 +4,36 @@
 .navbar
 	text-align: center
 	background: $nav-background
-	height: 43px
+	@media #{$large}
+		height: 43px
+	@media #{$desktop}
+		height: 43px
+
 	li
 		list-style : none
-		display: inline-block
 		padding: 10px
 		border-bottom: 5px solid transparent
+		@media #{$large}
+			display: inline-block
+		@media #{$desktop}
+			display: inline-block
+		@media #{$tablet}
+			display: block
+		@media #{$phablet}
+			display: block
+		@media #{$mobile}
+			display: block
+
+
 	li:hover
 		background: $nav-selected
 	.active
-		border-bottom: 5px solid $nav-selected-border
 		background: $nav-selected
+
+		@media #{$large}
+			border-bottom: 5px solid $nav-selected-border
+		@media #{$desktop}
+			border-bottom: 5px solid $nav-selected-border
 		a
 			color:white
 	a
@@ -24,20 +43,83 @@
 		height: 20px
 		padding: 10px 0
 
+.menu-button
+	width : 20px
+	height : 20px
+	padding: 10px
+	cursor: pointer
+	color: $submenu-color
+	float : left
+	@media #{$large}
+		display : none
+	@media #{$desktop}
+		display : none
+	@media #{$tablet}
+		display : inline-block
+	@media #{$phablet}
+		display : inline-block
+	@media #{$mobile}
+		display : inline-block
 
-.navbar-right
+
+.contact-button
 	float : right
+	cursor: pointer
+	padding: 3px 15px
+	@media #{$large}
+		display : none
+	@media #{$desktop}
+		display : none
+	@media #{$tablet}
+		display : inline-block
+	@media #{$phablet}
+		display : inline-block
+	@media #{$mobile}
+		display : inline-block
+
+.icon:before
+	content: "\2709";
+	font-size: 30px;
+	color: $submenu-color
+
+.navbar-items
 	margin: 0
 	padding-left : 0
+
+	@media #{$large}
+		float : right
+
+	@media #{$desktop}
+		float : right
+
+.close
+	@media #{$tablet}
+		display : none
+	@media #{$phablet}
+		display : none
+	@media #{$mobile}
+		display : none
 
 .navbar-content
 	overflow: auto
 	display: inline-block
-	text-align: left
 
 	@media #{$large}
 		width: $max-width;
+		text-align: left
+
 	@media #{$desktop}
 		width: $max-width-per;
+		text-align: left
+
 	@media #{$tablet}
-		width: $max-width-per;
+		width: 100%;
+		text-align: center
+
+	@media #{$phablet}
+		width: 100%;
+		text-align: center
+	@media #{$mobile}
+		width: 100%;
+		text-align: center
+

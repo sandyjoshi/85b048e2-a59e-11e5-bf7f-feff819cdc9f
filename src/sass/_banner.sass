@@ -9,7 +9,8 @@
 .banner-text-section
 	width : 50%
 	display: inline-block
-
+	@media #{$phablet}
+		width : 100%
 .banner-text
 	background : $banner-text
 	color : white
@@ -24,4 +25,6 @@
 	@media #{$desktop}
 		width: $max-width-per;
 	@media #{$tablet}
+		width: $max-width-per;
+	@media #{$phablet}
 		width: $max-width-per;

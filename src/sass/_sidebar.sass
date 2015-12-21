@@ -1,27 +1,22 @@
 @import colors
 
 .side-bar
-	float: right
-	width: 250px
-	border-left: 20px solid white
-	margin-top: 20px
-
-.sub-menu-section
-	border: 1px solid $border-color
-	padding: 10px 0
-	margin-bottom: 10px
-	border-radius: 5px
-	.header
-		text-align: center
-		margin: 0
-
-.sub-menu-item
-	padding: 5px 0 5px 15px
-	color: $submenu-color
-
-.sub-menu-item:hover
-	background-color: $submenu-color
-	color: white
+	clear: both
+	margin-top: 10px
+	@media #{$large}
+		float: right
+		width: 250px
+		border-left: 20px solid white
+	@media #{$desktop}
+		float: right
+		width: 250px
+		border-left: 20px solid white
+	@media #{$tablet}
+		display: none
+	@media #{$phablet}
+		display: none
+	@media #{$mobile}
+		display: none
 
 .contact-section
 	margin-top: 10px
@@ -58,6 +53,7 @@
 		width: 50px
 		display: inline-block
 		font-weight: bold
+		margin-left: 10%
 
 .contact-form
 	background-color: $contact-form-background
@@ -98,7 +94,19 @@
 
 .address-section
 	background-color: $contact-section-background
-	padding: 0 0 20px 0
+	@media #{$large}
+		padding: 0 0 20px 0
+	@media #{$desktop}
+		padding: 0 0 20px 0
+	@media #{$tablet}
+		padding: 20px
+	@media #{$phablet}
+		padding: 0 0 20px 0
+		text-align: center
+	@media #{$mobile}
+		padding: 0 0 20px 0
+
+
 	border-bottom-right-radius: 5px
 	border-bottom-left-radius: 5px
 	.header
@@ -107,8 +115,13 @@
 		font-weight: bold
 	img
 		margin-bottom: 15px
+	.address-details
+		display : inline-block
+		vertical-align: top
 	.address-item
 		padding-left: 20px
 	.map
 		height : 150px
 		width : 250px
+		@media #{$mobile}
+			width : 100%
