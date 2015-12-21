@@ -8,9 +8,13 @@ footer
 	margin-top: 10px
 
 .footer-col
-	display: inline-block
 	vertical-align: top
 	padding-left: 3%
+	+mediaQuery($tablet, $phablet, $desktop, $large)
+		display: inline-block
+	@media #{$mobile}
+		display: block
+
 	.footer-col-item
 		color: $footer-color
 		list-style: none
