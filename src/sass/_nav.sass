@@ -4,35 +4,25 @@
 .navbar
 	text-align: center
 	background: $nav-background
-	@media #{$large}
-		height: 43px
-	@media #{$desktop}
+	+mediaQuery($large, $desktop)
 		height: 43px
 
 	li
 		list-style : none
 		padding: 10px
 		border-bottom: 5px solid transparent
-		@media #{$large}
+		+mediaQuery($large, $desktop)
 			display: inline-block
-		@media #{$desktop}
-			display: inline-block
-		@media #{$tablet}
-			display: block
-		@media #{$phablet}
-			display: block
-		@media #{$mobile}
-			display: block
 
+		+mediaQuery($tablet, $phablet, $mobile)
+			display: block
 
 	li:hover
 		background: $nav-selected
 	.active
 		background: $nav-selected
 
-		@media #{$large}
-			border-bottom: 5px solid $nav-selected-border
-		@media #{$desktop}
+		+mediaQuery($large, $desktop)
 			border-bottom: 5px solid $nav-selected-border
 		a
 			color:white
@@ -50,31 +40,18 @@
 	cursor: pointer
 	color: $submenu-color
 	float : left
-	@media #{$large}
+	+mediaQuery($large, $desktop)
 		display : none
-	@media #{$desktop}
-		display : none
-	@media #{$tablet}
+	+mediaQuery($tablet, $phablet, $mobile)
 		display : inline-block
-	@media #{$phablet}
-		display : inline-block
-	@media #{$mobile}
-		display : inline-block
-
 
 .contact-button
 	float : right
 	cursor: pointer
 	padding: 3px 15px
-	@media #{$large}
+	+mediaQuery($large, $desktop)
 		display : none
-	@media #{$desktop}
-		display : none
-	@media #{$tablet}
-		display : inline-block
-	@media #{$phablet}
-		display : inline-block
-	@media #{$mobile}
+	+mediaQuery($tablet, $phablet, $mobile)
 		display : inline-block
 
 .icon:before
@@ -86,18 +63,11 @@
 	margin: 0
 	padding-left : 0
 
-	@media #{$large}
-		float : right
-
-	@media #{$desktop}
+	+mediaQuery($large, $desktop)
 		float : right
 
 .close
-	@media #{$tablet}
-		display : none
-	@media #{$phablet}
-		display : none
-	@media #{$mobile}
+	+mediaQuery($tablet, $phablet, $mobile)
 		display : none
 
 .navbar-content
@@ -112,14 +82,6 @@
 		width: $max-width-per;
 		text-align: left
 
-	@media #{$tablet}
+	+mediaQuery($tablet, $phablet, $mobile)
 		width: 100%;
 		text-align: center
-
-	@media #{$phablet}
-		width: 100%;
-		text-align: center
-	@media #{$mobile}
-		width: 100%;
-		text-align: center
-

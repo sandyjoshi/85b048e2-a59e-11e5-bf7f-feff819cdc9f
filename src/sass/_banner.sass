@@ -22,9 +22,5 @@
 
 	@media #{$large}
 		width: $max-width;
-	@media #{$desktop}
-		width: $max-width-per;
-	@media #{$tablet}
-		width: $max-width-per;
-	@media #{$phablet}
+	+mediaQuery($tablet, $desktop, $phablet)
 		width: $max-width-per;

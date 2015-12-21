@@ -38,7 +38,5 @@
 
 	@media #{$large}
 		width: $max-width;
-	@media #{$desktop}
-		width: $max-width-per;
-	@media #{$tablet}
+	+mediaQuery($tablet, $desktop)
 		width: $max-width-per;

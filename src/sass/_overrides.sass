@@ -7,3 +7,8 @@ $large: "(min-width: 1024px)";
 $max-width : 980px;
 $max-width-per : 95%;
 
+=mediaQuery($devices...)
+	@each $device in $devices
+		@media #{$device}
+			@content
+

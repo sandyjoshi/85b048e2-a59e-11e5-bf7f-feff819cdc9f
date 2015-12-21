@@ -1,21 +1,15 @@
 @import colors
+@import overrides
 
 .side-bar
 	clear: both
 	margin-top: 10px
-	@media #{$large}
+	+mediaQuery($desktop, $large)
 		float: right
 		width: 250px
 		border-left: 20px solid white
-	@media #{$desktop}
-		float: right
-		width: 250px
-		border-left: 20px solid white
-	@media #{$tablet}
-		display: none
-	@media #{$phablet}
-		display: none
-	@media #{$mobile}
+
+	+mediaQuery($tablet, $phablet, $mobile)
 		display: none
 
 .contact-section
@@ -94,18 +88,13 @@
 
 .address-section
 	background-color: $contact-section-background
-	@media #{$large}
-		padding: 0 0 20px 0
-	@media #{$desktop}
+	+mediaQuery($large, $desktop, $mobile)
 		padding: 0 0 20px 0
 	@media #{$tablet}
 		padding: 20px
 	@media #{$phablet}
 		padding: 0 0 20px 0
 		text-align: center
-	@media #{$mobile}
-		padding: 0 0 20px 0
-
 
 	border-bottom-right-radius: 5px
 	border-bottom-left-radius: 5px

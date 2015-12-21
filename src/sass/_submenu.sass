@@ -3,24 +3,12 @@
 	padding: 10px 0
 	border-radius: 5px
 
-	@media #{$large}
+	+mediaQuery($tablet, $desktop, $large)
 		float: right
 		width: 250px
 		margin: 20px 0 0 20px
 
-	@media #{$desktop}
-		float: right
-		width: 250px
-		margin: 20px 0 0 20px
-
-	@media #{$tablet}
-		float: right
-		width: 250px
-		margin: 20px 0 0 20px
-
-	@media #{$phablet}
-		margin: 20px
-	@media #{$mobile}
+	+mediaQuery($phablet, $mobile)
 		margin: 20px
 
 	.header

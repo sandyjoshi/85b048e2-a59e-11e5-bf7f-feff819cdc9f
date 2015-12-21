@@ -37,9 +37,7 @@ $article-item-margin : 10px
 
 	@media #{$large}
 		width: $max-width;
-	@media #{$desktop}
-		width: $max-width-per;
-	@media #{$tablet}
+	+mediaQuery($tablet, $desktop)
 		width: $max-width-per;
 	@media (max-width: ($article-item-width + ( 2 * $article-item-margin ) ) * 2 )
 		text-align: center
