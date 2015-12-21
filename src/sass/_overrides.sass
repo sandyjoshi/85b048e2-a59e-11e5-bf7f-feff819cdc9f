@@ -1,12 +1,15 @@
+// basic device distribution.
 $mobile: "(max-width: 320px)";
 $phablet: "(min-width: 320px) and (max-width: 600px)";
 $tablet: "(min-width: 600px) and (max-width: 767px)";
 $desktop : "(min-width: 768px) and (max-width: 1023px)";
 $large: "(min-width: 1024px)";
 
+// general maximum width
 $max-width : 980px;
 $max-width-per : 95%;
 
+// mixine for multiple media query
 =mediaQuery($devices...)
 	@each $device in $devices
 		@media #{$device}

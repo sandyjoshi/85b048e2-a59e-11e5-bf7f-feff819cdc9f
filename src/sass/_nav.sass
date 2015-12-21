@@ -6,18 +6,19 @@
 	background: $nav-background
 	+mediaQuery($large, $desktop)
 		height: 43px
-
-	li
+	.nav-link
 		list-style : none
 		padding: 10px
 		border-bottom: 5px solid transparent
 		+mediaQuery($large, $desktop)
 			display: inline-block
-
 		+mediaQuery($tablet, $phablet, $mobile)
 			display: block
+		a
+			color : $nav-color
+			text-decoration: none
 
-	li:hover
+	.nav-link:hover
 		background: $nav-selected
 	.active
 		background: $nav-selected
@@ -26,9 +27,6 @@
 			border-bottom: 5px solid $nav-selected-border
 		a
 			color:white
-	a
-		color : $nav-color
-		text-decoration: none
 	.logo
 		height: 20px
 		padding: 10px 0

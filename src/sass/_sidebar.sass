@@ -12,6 +12,7 @@
 	+mediaQuery($tablet, $phablet, $mobile)
 		display: none
 
+// contact section
 .contact-section
 	margin-top: 10px
 	background-color: $contact-section-background
@@ -90,8 +91,13 @@
 	.text-area-length
 		float: right
 
+// address section
+
 .address-section
 	background-color: $contact-section-background
+	border-bottom-right-radius: 5px
+	border-bottom-left-radius: 5px
+
 	+mediaQuery($large, $desktop)
 		padding: 0 0 20px 0
 	@media #{$tablet}
@@ -100,14 +106,10 @@
 		padding: 0 0 20px 0
 		text-align: center
 
-	border-bottom-right-radius: 5px
-	border-bottom-left-radius: 5px
 	.header
 		padding : 10px
 		text-align: center
 		font-weight: bold
-	img
-		margin-bottom: 15px
 	.address-details
 		display : inline-block
 		vertical-align: top
@@ -117,6 +119,7 @@
 			text-align: left
 
 	.map
+		margin-bottom: 15px
 		height : 150px
 		width : 250px
 		@media #{$mobile}
