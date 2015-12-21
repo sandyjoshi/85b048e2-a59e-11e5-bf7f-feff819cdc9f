@@ -11,10 +11,11 @@
 	font-size: 20px
 
 .quote
-	width: 40%
 	float: right
 	padding: 20px
 	font-size : 20px
+	+mediaQuery($tablet, $desktop, $large)
+		width: 40%
 
 .author
 	float: right
@@ -22,8 +23,12 @@
 
 .section-header
 	text-align: center
-	background-image: url('../images/line.png')
 	width: 100%
+	+mediaQuery($tablet, $desktop, $phablet, $large)
+		background-image: url('../images/line.png')
+	+mediaQuery($mobile)
+		border-bottom: 1px solid $border-color
+
 	.title
 		display: inline-block
 		padding: 0 10px

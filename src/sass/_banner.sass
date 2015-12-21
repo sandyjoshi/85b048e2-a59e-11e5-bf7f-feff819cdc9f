@@ -9,7 +9,7 @@
 .banner-text-section
 	width : 50%
 	display: inline-block
-	@media #{$phablet}
+	+mediaQuery($mobile, $phablet)
 		width : 100%
 .banner-text
 	background : $banner-text
@@ -22,5 +22,5 @@
 
 	@media #{$large}
 		width: $max-width;
-	+mediaQuery($tablet, $desktop, $phablet)
+	+mediaQuery($tablet, $desktop, $phablet, $mobile)
 		width: $max-width-per;

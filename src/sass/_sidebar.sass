@@ -15,8 +15,7 @@
 .contact-section
 	margin-top: 10px
 	background-color: $contact-section-background
-	border-bottom-right-radius: 5px
-	border-bottom-left-radius: 5px
+	border-radius: 5px
 
 .profile-cover
 	width: 100%
@@ -83,16 +82,17 @@
 		background-color: $submenu-color
 		color: white
 		margin: 20px 0 10px 0
+		cursor: pointer
 	.text-area-length
 		float: right
 
 .address-section
 	background-color: $contact-section-background
-	+mediaQuery($large, $desktop, $mobile)
+	+mediaQuery($large, $desktop)
 		padding: 0 0 20px 0
 	@media #{$tablet}
 		padding: 20px
-	@media #{$phablet}
+	+mediaQuery($phablet, $mobile)
 		padding: 0 0 20px 0
 		text-align: center
 
@@ -109,6 +109,9 @@
 		vertical-align: top
 	.address-item
 		padding-left: 20px
+		+mediaQuery($phablet)
+			text-align: left
+
 	.map
 		height : 150px
 		width : 250px

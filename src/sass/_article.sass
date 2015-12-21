@@ -4,7 +4,6 @@
 $article-item-width : 300px
 $article-item-margin : 10px
 
-
 .article-section
 	padding: 10px 0;
 	text-align: center
@@ -12,22 +11,26 @@ $article-item-margin : 10px
 .article-item
 	display: inline-block
 	border-radius: 5px
-	width: $article-item-width
 	vertical-align: top
 	margin: $article-item-margin
 	border: 1px solid $border-color
 	overflow: hidden
 	text-align: left
+	+mediaQuery($large, $desktop, $tablet, $phablet)
+		width: $article-item-width
+	+mediaQuery($mobile)
+		$article-item-width : 90%
+
 	.img
 		height: 200px
-		width: $article-item-width
+		width: 100%
 
 	.details
 		margin: 10px 10px 20px 10px
 
 	.title
 		color: $submenu-color
-
+		cursor: pointer
 	.desc
 		color: $article-desc
 
