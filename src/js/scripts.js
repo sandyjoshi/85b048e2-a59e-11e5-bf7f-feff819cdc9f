@@ -1,5 +1,5 @@
 
-$('.menu-button').on('click', function(event) {
+$('.menu-button').on('click touchstart', function(event) {
     event.stopPropagation();
     event.preventDefault();
 	var items = $('.navbar-items');
@@ -7,7 +7,7 @@ $('.menu-button').on('click', function(event) {
 });
 
 
-$('.contact-button').on('click', function(event) {
+$('.contact-button').on('click touchstart', function(event) {
     event.stopPropagation();
     event.preventDefault();
 	$('.banner').toggle();
@@ -16,5 +16,4 @@ $('.contact-button').on('click', function(event) {
 	$('.series-section').toggle();
 	$('.article-section').toggle();
 	$('.side-bar').toggle();
-
 });
