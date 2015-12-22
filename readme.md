@@ -15,5 +15,6 @@ Once you have cloned the repo, navigate in to the directory via terminal and run
 git clone https://github.com/sandyjoshi/85b048e2-a59e-11e5-bf7f-feff819cdc9f.git demo
 cd demo
 npm install
+gulp build
 gulp
 ```

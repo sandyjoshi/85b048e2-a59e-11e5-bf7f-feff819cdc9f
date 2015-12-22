@@ -83,6 +83,7 @@ gulp.task('images', function () {
   .pipe(gulp.dest('dist/images'));
 });
 
+gulp.task('build', ['sass', 'scripts', 'images'])
 
 /**
 *
