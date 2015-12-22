@@ -17,3 +17,8 @@ $('.contact-button').on('click touchstart', function(event) {
 	$('.article-section').toggle();
 	$('.side-bar').toggle();
 });
+
+var number = $(".text-area-length") ;
+$( ".message" ).change(function() {
+   number.html( $(this).val().length + " / 160" );
+});
